@@ -7,13 +7,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 direction;
     private Rigidbody2D rb;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // load rigidbody
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         // read the WASD keys each frame

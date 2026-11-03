@@ -6,9 +6,9 @@ public class EnemyChase : MonoBehaviour
     private Rigidbody2D rb;
     private Rigidbody2D playerRb;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // load rigidbodies
         rb = GetComponent<Rigidbody2D>();
         playerRb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
