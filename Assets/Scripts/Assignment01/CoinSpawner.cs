@@ -19,6 +19,7 @@ public class CoinSpawner : MonoBehaviour
             // get a random position between min and max positions for each coordinate
             Vector2 randPosition = new Vector2(Random.Range(minPosition.x, maxPosition.x), Random.Range(minPosition.y, maxPosition.y));
             // spawn the coin
+            // note: randPosition is a Vector2 but gets converted implicitly into Vector3
             Instantiate(coinPrefabs[randCoin], randPosition, Quaternion.identity);
         }
         coinsLeft = coinsPerBatch;
