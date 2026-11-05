@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange_Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 3739877829398076388, guid: 46010c1a18b0d7747889576220c16d38, type: 3}
+      propertyPath: coinValue
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739877829398076388, guid: 46010c1a18b0d7747889576220c16d38, type: 3}
+      propertyPath: coinColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739877829398076388, guid: 46010c1a18b0d7747889576220c16d38, type: 3}
+      propertyPath: coinColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739877829398076388, guid: 46010c1a18b0d7747889576220c16d38, type: 3}
+      propertyPath: coinColor.g
+      value: 0.38759685
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739877829398076388, guid: 46010c1a18b0d7747889576220c16d38, type: 3}
+      propertyPath: coinColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7497136695044096620, guid: 46010c1a18b0d7747889576220c16d38, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -67,27 +87,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2389477982445062151, guid: 46010c1a18b0d7747889576220c16d38, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3677918234468548679}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46010c1a18b0d7747889576220c16d38, type: 3}
---- !u!1 &7483759859938207216 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2389477982445062151, guid: 46010c1a18b0d7747889576220c16d38, type: 3}
-  m_PrefabInstance: {fileID: 5112296280431848951}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3677918234468548679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7483759859938207216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ba30e9e10f09f4888ee6343af18fde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Coin
-  coinValue: 50
-  coinColor: {r: 0.9433962, g: 0.42012802, b: 0.031149892, a: 1}
