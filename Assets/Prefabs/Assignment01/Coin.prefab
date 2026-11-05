@@ -142,4 +142,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
   coinValue: 0
-  coinColor: {r: 0, g: 0, b: 0, a: 0}
+  coinColor: {r: 0, g: 0, b: 0, a: 1}
