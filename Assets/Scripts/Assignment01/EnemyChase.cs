@@ -5,8 +5,8 @@ public class EnemyChase : MonoBehaviour
     public float speed = 2.0f;
     private Rigidbody2D rb;
     private Rigidbody2D playerRb;
-    
-    void Start()
+
+    private void Awake()
     {
         // load rigidbodies
         rb = GetComponent<Rigidbody2D>();

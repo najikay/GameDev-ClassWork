@@ -13,6 +13,34 @@ public class PlayerController : MonoBehaviour
     private bool hasWon = false;
     private CoinSpawner coinSpawner;
 
+    private void Awake()
+    {
+        // load rigidbody
+        rb = GetComponent<Rigidbody2D>();
+        
+        // get a coin spawner reference to have access to coin collected method
+        coinSpawner = GameObject.FindGameObjectWithTag("CoinSpawner").GetComponent<CoinSpawner>();
+    }
+
+    private void Update()
+    {
+        // read the WASD keys each frame
+        float aVal, dVal, wVal, sVal;
+        aVal = Keyboard.current.aKey.value;
+        dVal = Keyboard.current.dKey.value;
+        wVal = Keyboard.current.wKey.value;
+        sVal = Keyboard.current.sKey.value;
+        
+        // put the values in a vector and normalize
+        direction = new Vector2(dVal - aVal, wVal - sVal).normalized;
+    }
+
+    private void FixedUpdate()
+    {
+        // apply the movement (fixed time delta)
+        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+    }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
@@ -42,33 +70,5 @@ public class PlayerController : MonoBehaviour
                 EditorApplication.isPlaying = false;
             }
         }
-    }
-
-    void Start()
-    {
-        // load rigidbody
-        rb = GetComponent<Rigidbody2D>();
-        
-        // get a coin spawner reference to have access to coin collected method
-        coinSpawner = GameObject.FindGameObjectWithTag("CoinSpawner").GetComponent<CoinSpawner>();
-    }
-
-    void Update()
-    {
-        // read the WASD keys each frame
-        float aVal, dVal, wVal, sVal;
-        aVal = Keyboard.current.aKey.value;
-        dVal = Keyboard.current.dKey.value;
-        wVal = Keyboard.current.wKey.value;
-        sVal = Keyboard.current.sKey.value;
-        
-        // put the values in a vector and normalize
-        direction = new Vector2(dVal - aVal, wVal - sVal).normalized;
-    }
-
-    private void FixedUpdate()
-    {
-        // apply the movement (fixed time delta)
-        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
     }
 }
